@@ -1,23 +1,23 @@
 const mood = [
     {
         text: 'happy',
-        icon: '(´◡`)'
+        icon: '😄'
     },
     {
         text: 'sad',
-        icon: '╥﹏╥'
+        icon: '😟'
     },
     {
         text: 'anxious',
-        icon: '(*ಠ_ಠ;)'
+        icon: '😰'
     },
     {
         text: 'nervous',
-        icon: '● ﹏ ●'
+        icon: '😬'
     },
     {
         text: 'angry',
-        icon: '(⸅⸟⸄)'
+        icon: '🤬'
     }
 ]
 
@@ -40,10 +40,10 @@ const forecast = [
     'you will step on shit',
     'you will find the true love',
     'you will die from covid',
-    'you find your missing twin brother'
+    'you will find your missing twin brother'
 ]
 
 const getRandom = length => Math.floor(Math.random()*length)
 
-let finalMessage = `You seem ${mood[getRandom(mood.length)].text} so you should ${advice[getRandom(advice.length)]} beacause today ${forecast[getRandom(forecast.length)]}`
+let finalMessage = `You seem ${mood[getRandom(mood.length)].text} ${mood[getRandom(mood.length)].icon} so you should ${advice[getRandom(advice.length)]} beacause today ${forecast[getRandom(forecast.length)]}`
 document.querySelector('p').innerText = finalMessage
